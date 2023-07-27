@@ -43,6 +43,10 @@ table {
 	border-spacing: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     overflow-x: hidden;
 }
@@ -101,20 +105,59 @@ h1 {
     margin: 0 auto;
 }
 
+.select-custom {
+    position: relative;
+    color: #444;
+    border-radius: 0;
+}
+
+.select-custom > select {
+    background: transparent;
+    border: 0;
+    appearance: none;
+    z-index: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select-custom > select::-ms-expand{
+    display: none;
+}
+
 .select-custom select {
     font-family: 'Inter';
-    appearance: none;
-    background: none;
+    /* appearance: none;
+    background: none; */
     border: none;
     color: #F5F5F5;
     outline: none;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-.select-custom:after {
-    content: url(../images/arrow.svg);
-    vertical-align: middle;
-    display: inline-block;
+.header-nr.select-custom {
+    width: 100px;
+}
+
+.header-nr.select-custom select {
+    width: 100%;
+}
+
+.select-arrow {
+    position: absolute;
+    z-index: -1;
+    border: 8px solid transparent;
+    border-bottom: 0;
+    right: 11px;
+}
+
+.select-arrow {
+    display: none;
+}
+
+.select-arrow.is-visible {
+    display: block;
+    top: 6px;
+    border-top-color: #fff;
 }
 
 .select-custom select option {

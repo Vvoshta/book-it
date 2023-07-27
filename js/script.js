@@ -9,5 +9,13 @@ $(document).ready(function() {
         headerMobile.removeClass('is-active');
     });
 
+    var selectCustom = $('.select-custom');
+    var selectArrow = $('.select-arrow');
+    
+    $(selectCustom).on('click', function() {
+        if(!$(selectArrow).hasClass('is-visible')) {
+            selectArrow.addClass('is-visible');
+        } else {
+            selectArrow.removeClass('is-visible');
+        }});
 });
-
