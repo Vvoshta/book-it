@@ -48,7 +48,6 @@ html, body {
 }
 
 body {
-	line-height: 1;
     font-family: 'Inter';
     position: relative;
 }
@@ -72,7 +71,7 @@ h1 {
 .def-title {
     font-size: 36px;
     font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #141E38;
 }
 
@@ -85,7 +84,7 @@ h1 {
 .def-btn {
     background-color: #E0B100;
     color: #fff;
-    padding: 16px 40px;
+    padding: 12px 40px;
     border-radius: 24px;
     display: inline-block;
     font-weight: 600;
@@ -98,6 +97,8 @@ h1 {
 
 .content {
     padding: 0 120px;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .select-custom select {
@@ -211,10 +212,89 @@ h1 {
 .logo img {
     max-width: 177px;
 }
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger img {
+    max-width: 40px;
+}
+
+.header-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #1E1E1E;
+    padding: 60px 25px;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.35s ease;
+}
+
+.header-mobile .header-right {
+    display: block;
+}
+
+.header-mobile .header-social,
+.header-mobile .header-btn-wrap {
+    border: none;
+}
+
+.header-mobile .header-left {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.header-mobile .header-left a {
+    display: block;
+}
+
+.header-mobile .header-phone {
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+.header-mobile .header-btn-wrap {
+    display: block;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.header-mobile .header-btn:first-child {
+    margin-right: 0;
+}
+
+.header-mobile .header-btn-wrap a {
+    margin-bottom: 20px;
+}
+
+.header-mobile .header-social {
+    margin-right: 0;
+    padding-right: 0;
+    margin-bottom: 15px;
+}
+
+.header-mobile-close {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.header-mobile-close img {
+    max-width: 20px;
+    opacity: 0.7;
+}
 /* Header END */
 
 /* Banner START */
 .banner-wrapper {
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
     padding-top: calc(156px + 80px);
     padding-bottom: 80px;
     color: #fff;
@@ -290,7 +370,7 @@ h1 {
 
 .banner-btn a {
     font-weight: 600;
-    padding: 15px 40px;
+    padding: 12px 40px;
     border-radius: 24px;
     border: 1px solid #E0B100;
     display: inline-block;
@@ -352,3 +432,370 @@ h1 {
     font-size: 18px;
 }
 /* Destinations END */
+
+/* Services START */
+.services-wrapper {
+    margin-top: 120px;
+    counter-reset: num;
+    background-repeat: no-repeat;
+    background-size: 585px 430px;
+    background-position: 66% 100px;
+    padding-bottom: 300px;
+}
+
+.services-row {
+    display: flex;
+
+}
+
+.services-item {
+    margin-bottom: 24px;
+    max-width: 650px;
+    position: relative;
+}
+
+.services-item:before {
+    content: counter(num);
+    counter-increment: num;
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    left: -40px;
+}
+
+.services-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.services-right {
+    margin-left: auto;
+    text-align: right;
+}
+/* Services END */
+
+/* Subscribe START */
+.subscribe-wrapper {
+    background-color: #E0B100;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.subscribe-wrapper .def-descr {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 40px;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.subscribe-form input {
+    width: 350px;
+    border: none;
+    padding: 12px 0;
+    font-family: 'Inter';
+    font-size: 16px;
+    outline: none;
+}
+
+.subscribe-input {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #141E38;
+    margin-right: 40px;
+}
+
+.subscribe-input img {
+    margin-right: 12px;
+}
+
+.subscribe-form .def-btn {
+    border: none;
+    cursor: pointer;
+}
+
+.subscribe-envelope {
+    margin-top: 40px;
+}
+/* Subscribe END */
+
+/* Footer START */
+.footer {
+    text-align: center;
+    margin-top: 160px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    margin-bottom: 40px;
+}
+
+.footer-text {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.footer-menu {
+    border-top: 1px solid #141E38;
+    border-bottom: 1px solid #141E38;
+    padding: 30px 0;
+    margin-bottom: 40px;
+}
+
+.footer-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-menu ul li {
+    display: inline-block;
+    color: #141E38;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer-menu ul li a {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-menu ul li a:after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #E0B100;
+    display: block;
+    transition: width 0.5s ease;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-menu ul li a:hover:after {
+    width: 100%;
+}
+
+.footer-copyright {
+    color: #141E38;
+}
+/* Footer END */
+
+/* Responsive START */
+@media screen and (max-width: 1400px) {
+
+    /* Destinations 1400 START */
+    .dest-left {
+        margin-right: 60px;
+    }
+    /* Destinations 1400 END */
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    /* Content 1200 START */
+    .content {
+        padding: 0 40px;
+    }
+    /* Content 1200 END */
+
+    /* Destinations 1200 START */
+    .dest-left {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .dest-row {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .dest-right {
+        width: 100%;
+    }
+
+    .country-image {
+        width: auto;
+    }
+    /* Destinations 1200 END */
+
+    /* Services 1200 START */
+    .services-left {
+        margin-left: 30px;
+    }
+    /* Services 1200 END */
+
+}
+
+@media screen and (max-width: 992px) {
+
+    /* All 992 START */
+    h1 {
+        font-size: 50px;
+        margin-bottom: 25px;
+    }
+    /* All 992 END */
+    
+    /* Header 992 START */
+    .header-top,
+    .header-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .header-mobile {
+        display: block;
+        transform: translateX(110%);
+    }
+
+    .header-mobile.is-active {
+        transform: none;
+    }
+    /* Header 992 END */
+
+    /* Banner 992 START */
+    .banner-wrapper {
+        padding-top: calc(93px + 80px);
+    }
+
+    .banner-descr {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .input-item input::placeholder {
+        color: #fff;
+    }
+
+    .input-item .select-custom select {
+        opacity: 1;
+    }
+    /* Banner 992 END */
+
+    /* Footer 992 START */
+    .footer {
+        margin-top: 70px;
+    }
+
+    .footer-logo {
+        margin-bottom: 25px;
+    }
+    /* Footer 992 END */
+
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Banner 768 START */
+    .banner-form form {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-btn {
+        text-align: center;
+    }
+
+    .banner-descr {
+        margin-bottom: 50px;
+    }
+    /* Banner 768 END */
+
+    /* Destinations 768 START */
+    .country-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    /* Destinations 768 END */
+
+    /* Services 768 START */
+    .services-wrapper {
+        margin-top: 0;
+        background-image: none !important;
+        padding-bottom: 50px;
+    }
+    
+    .services-row {
+        flex-direction: column;
+    }
+
+    .services-left {
+        order: 1;
+    }
+
+    .services-right {
+        text-align: left;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+    /* Services 768 END */
+
+    /* Subscribe 768 START */
+    .subscribe-form {
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .subscribe-input {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .subscribe-form input {
+        width: 100%;
+    }
+
+    .subscribe-envelope img {
+        max-width: 120px;
+    }
+    /* Subscribe 768 END */
+
+}
+
+@media screen and (max-width: 575px) {
+
+    /* Content 575 START */
+    .content {
+        padding: 0 20px;
+    }
+    /* Content 575 END */
+
+    /* Destinations 575 START */
+    .country-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    /* Destinations 575 END */
+
+    /* Footer 575 START */
+    .footer-menu ul {
+        display: block;
+    }
+
+    .footer-menu ul li {
+        display: block;
+    }
+
+    .footer-menu ul li:nth-last-child(n+2) {
+        margin-bottom: 15px;
+    }
+    /* Footer 575 END */
+}
+/* Responsive END */
